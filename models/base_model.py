@@ -5,12 +5,16 @@ from datetime import datetime
 import models
 
 class BaseModel():
-    """ A BaseModel class that defines all common attributes/methods for
-        other classes 
+    """ A BaseModel class that defines all common attributes/methods 
+        for other classes 
     """
 
     def __init__(self, *args, **kwargs):
-        """ Initializes attributes of the class """
+        """Initializes a new instance of BaseModel
+        Args:
+            *args (any): unused
+            **kwargs (dict): key & value pair of attributes
+        """
 
         if len(kwargs) != 0:
             for key, value in kwargs.items():

@@ -2,7 +2,14 @@
 """ Create a FileStorage class """
 
 import json
-from models import base_model
+from models.base_model import BaseModel
+from models.user import User
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+
 
 class FileStorage():
     """ Defines a FileStorage class that serializes instances to a JSON 
@@ -22,7 +29,7 @@ class FileStorage():
 
     def save(self):
         """ serializes __objects to the JSON file (path: __file_path) """
-        with open(self.__file_path, "w", encoding="utf-8") as f:
+        with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
             d = {k : v.to_dict() for k, v in self.__objects.items()}
             json.dump(d, f)
 
@@ -31,12 +38,12 @@ class FileStorage():
             file (__file_path) exists 
         """
         try:
-            with open(self.__file_path, "r", encoding="utf-8") as f:
-                obj_dict = json.load(f)
-                for o in obj_dict.values():
-                    cls_name = o["__class__"]
-                    del o["__class__"]
-                    self.new(eval(f"base_model.{cls_name}")(**o))
+            with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
+                _dict = json.load(f)
+                for obj_dict in _dict.values():
+                    cls_name = obj_dict["__class__"]
+                    del obj_dict["__class__"]
+                    self.new(eval(cls_name)(**obj_dict))
                     
         except FileNotFoundError:
             return
