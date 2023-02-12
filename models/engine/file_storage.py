@@ -12,8 +12,8 @@ from models.state import State
 
 
 class FileStorage():
-    """ Defines a FileStorage class that serializes instances to a JSON 
-        file and deserializes JSON file to instances 
+    """ Defines a FileStorage class that serializes instances to a JSON
+        file and deserializes JSON file to instances
     """
     __file_path = "file.json"
     __objects = {}
@@ -30,12 +30,12 @@ class FileStorage():
     def save(self):
         """ serializes __objects to the JSON file (path: __file_path) """
         with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
-            d = {k : v.to_dict() for k, v in self.__objects.items()}
+            d = {k: v.to_dict() for k, v in self.__objects.items()}
             json.dump(d, f)
 
     def reload(self):
-        """ deserializes the JSON file to __objects (only if the JSON 
-            file (__file_path) exists 
+        """ deserializes the JSON file to __objects (only if the JSON
+            file (__file_path) exists
         """
         try:
             with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
@@ -44,6 +44,6 @@ class FileStorage():
                     cls_name = obj_dict["__class__"]
                     del obj_dict["__class__"]
                     self.new(eval(cls_name)(**obj_dict))
-                    
+
         except FileNotFoundError:
             return
