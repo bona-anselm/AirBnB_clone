@@ -6,10 +6,17 @@ body {
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-div.container {
+.container {
     max-width: 1000px;
-    margin-top: 30px;
-    margin-bottom: 30px;
     display: flex;
-    justify-content: center;
+    margin: 30px auto;
+}
+
+.locations, .amenities {
+    height: 100%;
+    width: 25%;
+}
+
+.locations {
+    border-right: 1px solid #DDDDDD;
 }
