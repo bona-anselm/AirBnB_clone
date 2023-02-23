@@ -15,8 +15,21 @@ body {
 .locations, .amenities {
     height: 100%;
     width: 25%;
+    margin-left: 50px;
 }
 
 .locations {
     border-right: 1px solid #DDDDDD;
+}
+
+.locations h3, .amenities h3 {
+    font-size: 14x;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.locations h4, .amenities h4 {
+    font-size: 14x;
+    font-weight: 400;
+    margin-top: 0px;
 }
