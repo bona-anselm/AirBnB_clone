@@ -8,7 +8,7 @@ body {
 
 .container {
     max-width: 1000px;
-    display: flex;
+    display: block;
     margin: 30px auto;
 }
 
@@ -32,4 +32,41 @@ body {
     font-size: 14x;
     font-weight: 400;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
+
+ .popover {
+     background-color: #FAFAFA;
+     width: 100%;
+     border: 1px solid #DDDDDD;
+     border-radius: 4px;
+     list-style-type: none;
+     margin: 19.5px 0 0 -50px;
+     padding-inline-start: 30px;
+     padding-bottom: 30px;
+     display: none;
+ }
+
+ .popover h2 {
+     font-size: 16px;
+ }
+
+ .popover li {
+    padding-left: 20px;
+ }
+
+ .amenities ul {
+     padding-top: 30px;
+ }
+
+ .locations ul {
+     padding-top: 20px;
+ }
+
+ .locations:hover ul {
+     display: block;
+ }
+
+ .amenities:hover ul {
+     display: block;
+ }
