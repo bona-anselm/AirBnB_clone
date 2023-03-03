@@ -12,7 +12,7 @@ body {
     margin: 30px auto;
 }
 
-.locations, .amenities {
+.locations, .filters div.amenities {
     height: 100%;
     width: 25%;
     margin-left: 50px;
@@ -41,7 +41,7 @@ body {
      border: 1px solid #DDDDDD;
      border-radius: 4px;
      list-style-type: none;
-     margin: 19.5px 0 0 -50px;
+     margin: 19px 0 0 -50px;
      padding-inline-start: 30px;
      padding-bottom: 30px;
      display: none;
