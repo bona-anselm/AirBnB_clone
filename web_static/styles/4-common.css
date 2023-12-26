@@ -1,0 +1,72 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    display: block;
+    margin: 30px auto;
+}
+
+.locations, .filters div.amenities {
+    height: 100%;
+    width: 25%;
+    margin-left: 50px;
+}
+
+.locations {
+    border-right: 1px solid #DDDDDD;
+}
+
+.locations h3, .amenities h3 {
+    font-size: 14x;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.locations h4, .amenities h4 {
+    font-size: 14x;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ .popover {
+     background-color: #FAFAFA;
+     width: 100%;
+     border: 1px solid #DDDDDD;
+     border-radius: 4px;
+     list-style-type: none;
+     margin: 19px 0 0 -50px;
+     padding-inline-start: 30px;
+     padding-bottom: 30px;
+     display: none;
+ }
+
+ .popover h2 {
+     font-size: 16px;
+ }
+
+ .popover li {
+    padding-left: 20px;
+ }
+
+ .amenities ul {
+     padding-top: 30px;
+ }
+
+ .locations ul {
+     padding-top: 20px;
+ }
+
+ .locations:hover ul {
+     display: block;
+ }
+
+ .amenities:hover ul {
+     display: block;
+ }
