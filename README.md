@@ -124,3 +124,8 @@ $
 
 - **Kehinde Opaleye** - [Kenny15200](https://github.com/kenny15200)
 - **Bonaventure Anselm** - [bona-anselm](https://github.com/bona-anselm)
+
+
+**Showed how to clone a repo**
+===
+
