@@ -126,5 +126,3 @@ $
 - **Bonaventure Anselm** - [bona-anselm](https://github.com/bona-anselm)
 
 
-**Showed how to clone a repo**
-
